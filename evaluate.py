@@ -24,7 +24,7 @@ def generate_predictions(model, dataloader, init_sequence_length):
     plt.plot(final_outputs, label='predicted')
     plt.plot(dataloader.dataset.labels[init_sequence_length:], label='actual')
     plt.legend(bbox_to_anchor=(1.05, 1), loc=2, borderaxespad=0.)
-    plt.show()
     plt.savefig('sin_wave.png')
+    plt.show()
 
     return final_outputs
